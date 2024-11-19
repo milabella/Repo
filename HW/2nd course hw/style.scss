@@ -86,17 +86,15 @@ a {
 }
 
 .scrollbar {
+    width: 100%;
     height: 90px;
-    background-image: url(img/scrollbar.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    z-index: 1;
-    position: relative;
+    background-image: url(img/scrollbar.png);
+    animation: scroll 50s linear infinite;
 }
 
-.scroll-mobile{
-    display: none;
+@keyframes scroll{
+    from { background-position: 3000px 90%, 180% 40%, 0 0; }
+    to { background-position: -2000px 90%, -300px 20%, 0 0; }
 }
 
 .header2 {
