@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper{
+    overflow: hidden;
+    position: relative;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.top-svg{
+    position: absolute;
+    top: -333px;
+    right: -488px;
+}
+
+.mobile-svg{
+    display: none;
+}
+
+.top {
+    height: 710px;
+    background-image: url(img/top_back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__header {
+        font-size: 64px;
+        font-weight: 700;
+        padding-top: 196px;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 400;
+        width: 720px;
+        padding-top: 24px;
+        padding-bottom: 48px;
+    }
+    &__text-mobile{
+        display: none;
+    }
+}
+
+.button {
+    width: 247px;
+    height: 66px;
+    border: 1px solid #202027;
+    border-radius: 60px;
+    background-color: #202027;
+    color: #fff;
+    padding: 16px 28px 16px 28px;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    z-index: 10;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #fff;
+        color: #000;
+    }
+    &-box{
+        position: relative;
+    }
+}
+
+.scrollbar {
+    width: 100%;
+    height: 90px;
+    background-image: url(img/scrollbar.png);
+    animation: scroll 50s linear infinite;
+}
+
+@keyframes scroll{
+    from { background-position: 3000px 90%, 180% 40%, 0 0; }
+    to { background-position: -2000px 90%, -300px 20%, 0 0; }
+}
+
+.header2 {
+    color: #fff;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.games-svg{
+    position: absolute;
+    top: 77px;
+    right: -117px;
+}
+
+.about {
+    max-height: 1470px;
+    background-color: #202027;
+
+    &__header {
+        padding-top: 94px;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        width: 788px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 72px;
+    }
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    &-img {
+        background-color: #fff;
+        border-radius: 30px 30px 0 0;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &-round {
+            border-radius: 30px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &-content {
+        background-color: #fff;
+        border-radius: 0 0 30px 30px;
+        padding: 32px;
+        grid-column: span 4;
+        position: relative;
+        z-index: 0;
+
+    }
+
+    &-header {
+        color: #202027;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+
+        &-box {
+            background-color: #F7F7F7;
+            width: 108px;
+            border-radius: 52.58px;
+            padding-top: 8px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &-text {
+        font-size: 32px;
+        font-weight: 700;
+        color: #202027;
+    }
+
+    &__1,
+    &__2,
+    &__3,
+    &__4,
+    &__5,
+    &__6 {
+        grid-column: span 4;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s;
+        z-index: 1;
+    }
+
+    &__4,
+    &__6 {
+        margin-top: -39px;
+    }
+
+    &__1:hover,
+    &__2:hover,
+    &__3:hover,
+    &__4:hover,
+    &__5:hover,
+    &__6:hover {
+        transform: scale(1.05);
+    }
+
+}
+
+.mini-svg{
+    position: absolute;
+    top: 1486px;
+    right: 45px;
+}
+
+.play{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    &__card1, &__card2, &__card3, &__card4, &__card5, &__card6 {
+        grid-column: span 12;
+    } 
+
+    &flex{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &flexreverse{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    &__img{
+        background-color: #fff;
+        z-index: 1;
+        overflow: hidden;
+        position: relative;
+        &-right{
+            border-radius: 0 30px 30px 0;
+        }
+        &-left{
+            border-radius: 30px 0 0 30px;
+        }
+        &-round{
+            width: 600px;
+            height: 500px;
+            display: block;
+        }
+    }
+    
+    &-content{
+        width: 552px;
+        height: auto;
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        position: relative;
+        z-index: 0;
+        &-right{
+            border-radius: 0 30px 30px 0;
+        }
+        &-left{
+            border-radius: 30px 0 0 30px;
+        }
+    }
+    &__card1,
+    &__card2,
+    &__card3,
+    &__card4,
+    &__card5,
+    &__card6{
+        grid-column: span 12;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.minigames{
+    height: 3500px;
+    background-color: #202027;
+
+    &__header {
+        padding-top: 46px;
+        padding-bottom: 72px;
+    }
+    &-name{
+        font-size: 48px;
+        font-weight: 700;
+        color: #202027;
+        margin-bottom: 24px;
+    }
+    &-text{
+        font-size: 24px;
+        font-weight: 400;
+        color: #202027;
+        margin-bottom: 36px;
+    }
+}
+
+.footer {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    padding-top: 61px;
+
+    &-box {
+        height: 150px;
+        background-color: #BDED35;
+    }
+}
+
+@import 'mobile';
