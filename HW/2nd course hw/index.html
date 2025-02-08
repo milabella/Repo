@@ -72,7 +72,7 @@
             </a>
         </div>
                 <div class="games__4">
-                <a href="#card4">
+                <a href="#card5">
                 <div class="games-img">
                     <img class="games-img-round" src="img/games4.png" alt="Игра 4">
                 </div>
@@ -85,7 +85,7 @@
             </a>
         </div>
             <div class="games__5">
-                <a href="#card5">
+                <a href="#card4">
                 <div class="games-img">
                     <img class="games-img-round" src="img/games5.png" alt="Игра 5">
                 </div>
@@ -143,7 +143,7 @@
                     <p class="minigames-text">Попробуй решить простые <br>арифметические задачи.</p>
                     <div class="button-box">
                         <form action="#">
-                            <input type="submit" class="button" value="Играть!">
+                            <input onclick="mathGame();" type="submit" class="button" value="Играть!">
                         </form>
                     </div>
                 </div>
@@ -159,7 +159,8 @@
                     <p class="minigames-text">Попробуй ввести текст, который <br>будет перевернут.</p>
                     <div class="button-box">
                         <form action="#">
-                            <input type="submit" class="button" value="Играть!">
+                            <input onclick="reverseWordGame();"
+                            type="submit" class="button" value="Играть!">
                         </form>
                     </div>
                 </div>
@@ -175,7 +176,9 @@
                     <p class="minigames-text">Отвечай на вопросы викторины <br>с вариантами ответов.</p>
                     <div class="button-box">
                         <form action="#">
-                            <input type="submit" class="button" value="Играть!">
+                            <input
+                            onclick="quizGame();" 
+                            type="submit" class="button" value="Играть!">
                         </form>
                     </div>
                 </div>
@@ -219,6 +222,6 @@
     <div class="footer-box">
         <footer class="footer">Все права защищены.</footer>
     </div>
-    <script src="hw-5.js"></script>
+    <script src="hw-7.js"></script>
 </body>
 </html>
