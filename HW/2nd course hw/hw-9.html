@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* Задание 1 */
+    .hide {
+        display: none;
+    }
+
+/* Задание 2 */
+    .change-color {
+        color: blue;
+    }
+
+</style>
+
+<body>
+<!-- Задание 1 -->
+<h1 class="header">Lorem, ipsum.</h1>
+<button class="btn">Remove header</button>
+
+<!-- Задание 2 -->
+<p class="par">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, temporibus?</p>
+<button class="btn-p">Изменить цвет</button>
+
+<!-- Задание 3 -->
+<button class="change-text">Изменить текст</button>
+
+<!-- Задание 4 -->
+<div class="description">Element #1</div>
+<div class="description">Element #2</div>
+<div class="description">Element #3</div>
+<div class="description">Element #4</div>
+
+<!-- Задание 5 -->
+<p class="description">Paragraph 1</p>
+<p class="description">Paragraph 2</p>
+<p class="desc">Paragraph 3</p>
+<p class="desc">Paragraph 4</p>
+<p class="description">Paragraph 5</p>
+
+<!-- Задание 6 -->
+<button class="create">Добавить элемент</button>
+<div class="here"></div>
+
+<!-- Задание 7 -->
+<button class="btn-remove">Удалить элемент</button>
+
+</body>
+
+<script>
+// Задание 1
+const headerEl = document.querySelector('.header');
+const btnEl = document.querySelector('.btn');
+btnEl.addEventListener('click', () => {
+    headerEl.classList.toggle('hide'); 
+});
+
+// Задание 2
+const paragraphEl = document.querySelector('.par');
+const btnEl2 = document.querySelector('.btn-p');
+btnEl2.addEventListener('click', () => {
+    paragraphEl.classList.add('change-color');
+});
+
+// Задание 3
+const btnEl3 = document.querySelector('.change-text');
+btnEl3.addEventListener('click', () => {
+    headerEl.textContent = 'Привет, мир!';
+});
+
+// Задание 4
+const descriptionEl = document.querySelectorAll('.description'); 
+console.log(descriptionEl); 
+descriptionEl.forEach(el => {
+    el.textContent = 'Измененный текст'; 
+});
+
+// Задание 5
+const descriptionElAll = document.querySelectorAll('.description'); 
+console.log(descriptionElAll); 
+descriptionElAll.forEach(el => {
+    el.textContent = 'Новый текст';
+});
+
+// Задание 6
+const btnNewEl = document.querySelector('.create');
+const hereEl = document.querySelector('.here');
+
+btnNewEl.addEventListener('click', () => {
+    const newEl = document.createElement('p');
+    newEl.textContent = 'Новый абзац';
+    newEl.classList.add('new'); 
+    hereEl.appendChild(newEl); 
+})
+
+//Задание 7
+const buttonRemoveEl = document.querySelector('.btn-remove'); 
+buttonRemoveEl.addEventListener('click', function (e) {
+    const firstParagraph = document.querySelector('p.description');
+    if (firstParagraph) {
+        firstParagraph.remove();
+    }
+});
+
+</script>
+</html>
