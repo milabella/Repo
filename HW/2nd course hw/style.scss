@@ -283,6 +283,7 @@ a {
 .minigames{
     height: 3500px;
     background-color: #202027;
+    transition: background-color 0.5s ease;
 
     &__header {
         padding-top: 46px;
@@ -300,6 +301,10 @@ a {
         color: #202027;
         margin-bottom: 36px;
     }
+}
+
+.change-color{
+    transition: background-color 0.1s ease;
 }
 
 .footer {
