@@ -65,6 +65,7 @@ function mathGame() {
 }
 
 // Игра "Переверни текст"
+
 function reverseWordGame() {
     for (let i = 0; i < 5; i++) {
         let userAnswer = prompt(`Введите текст:`);
