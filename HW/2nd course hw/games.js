@@ -47,12 +47,12 @@ function mathGame() {
                 break;
         }
 
-        const userAnswer = prompt(`What is ${N1} ${operation} ${N2}?`, 10);
+        const userAnswer = prompt(`Сколько будет ${N1} ${operation} ${N2}?`, 10);
 
         if (userAnswer == answer) {
-            alert('Correct!');
+            alert('Правильно!');
         } else {
-            alert(`Wrong! The correct answer is ${answer}.`);
+            alert(`Неправильно! Правильный ответ: ${answer}.`);
         }
 
         if (parseInt(userAnswer) === answer) {
@@ -60,28 +60,15 @@ function mathGame() {
         }
     }
 
-    alert(`${correctAnswers} out of 5 correct answers`);
+    alert(`${correctAnswers} из 5 правильных ответов`);
 
 }
 
 // Игра "Переверни текст"
-
-const words = ["Bottle", "Fridge", "Carpet", "Watch", "Curtain", "Glass"];
-
-function randomWord() {
-    word = words[Math.floor(Math.random() * words.length)];
-    return word.split('').reverse().join('');
-}
 function reverseWordGame() {
     for (let i = 0; i < 5; i++) {
-        let reversedWord = randomWord();
-        let userAnswer = prompt(`Reverse the word ${reversedWord}`);
-
-        if (userAnswer && userAnswer.toLowerCase() === word.toLowerCase()) {
-            alert('Correct');
-        } else {
-            alert('Try again');
-        }
+        let userAnswer = prompt(`Введите текст:`);
+        alert(userAnswer.split('').reverse().join(''));
     }
 }
 
@@ -110,13 +97,13 @@ function quizGame() {
 
     for (let i = 0; i < quiz.length; i++) {
         let currentQuestion = quiz[i];
-        let userAnswer = prompt(`Enter the number of the correct answer:\n${currentQuestion.question}\n${currentQuestion.options.join("\n")}`);
+        let userAnswer = prompt(`Введите номер правильного ответа:\n${currentQuestion.question}\n${currentQuestion.options.join("\n")}`);
 
         if (parseInt(userAnswer) === currentQuestion.correctAnswer) {
             correctAnswers++;
         }
     }
-    alert(`${correctAnswers} out of ${quiz.length} correct answers`);
+    alert(`${correctAnswers} из ${quiz.length} правильных ответов`);
 }
 
 // Игра "Камень, ножницы, бумага"
